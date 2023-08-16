@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Jakarta';
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: local("Jakarta"), url(../../public/fonts/PlusJakartaSans-Regular.woff2) format("woff2")
+}
+
+/* global.css */
+
+/*global colors */
+
+:root {
+  --primary-color: #32b6e6;
+  --secondary-color: #165166;
+  --tertiary-color: #7acdeb;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --transparent-color: #32b6e64a;
+}
+
+
+
+/* Reset default list styling for <li> elements */
+li {
+  list-style-type: none;
+}
+.primary {
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color:var(--white-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.primary:first-child {
+margin-right: 10px;
+}
+
+.secondary {
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: var(--secondary-color);
+  border-radius: 4px;
+  background-color: transparent;
+
+}
+
+.secondary:hover {
+  color: #444;
+  border-color: #444;
+}
+
+.tertiary {
+  display: inline-block;
+  border: none;
+  color: #666;
+  border-radius: 4px;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.tertiary:hover {
+  color: #444;
+}
+
+
+
+
+
+select:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+label {
+  text-align: left;
+ font-size: 14px;
+  display: block;
+  padding-left: 0.5em;
+
+}
+
+.modal-buttons button {
+  font-size: 14px;
+  padding: 8px 12px;
+  min-width: 80px; /* Adjust this width as needed */
+}
+
+.modal-buttons button:first-child {
+  margin-right: 10px;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-spacing: 0;
+}
+
+tr:nth-child(even) {
+  background-color: var(--transparent-color);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: normal
+}
+
+td {
+  border-right: 1px solid var(--primary-color);
+}
+
+td:first-child {
+  border-left: none;
+  text-decoration: underline; /* Add this line to underline the text */
+}
+
+td:last-child {
+  border-right: none;
+}
+
+.form-group input,
+.form-group select {
+  width: 60vw;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+/* Global modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 70vw;
+}
+
+
+.modal textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable resize */
+  transition: border-color 0.3s;
+}
+
+select, input, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  /* Accent color */
+}
+
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 27px;
+  color: #888;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.success-msg {
+  color: green;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  height: 90vh; /* Use the full viewport height */
+}
